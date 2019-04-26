@@ -1,0 +1,78 @@
+.first-screen
+	padding: 220px 80px 195px 0
+	max-width: 50%
+	min-height: 830px
+	+r(991)
+		max-width: none
+		min-height: auto
+		padding: 81px 0 80px
+	+r(767)
+		padding: 81px 0 60px
+	+r(400)
+		padding-top: 92px
+		padding-bottom: 40px
+	&__img
+		position: absolute
+		left: 100%
+		right: auto
+		top: 110px
+		bottom: 0
+		background-size: cover
+		background-position: 0 50%
+		background-repeat: no-repeat
+		max-width: 690px
+		+r(991)
+			background: none
+			position: relative
+			left: 0
+			top: 0
+			margin-bottom: 30px
+		img
+			opacity: 0
+			+r(991)
+				display: block
+				width: 100%
+				height: auto
+				opacity: 1
+	h1
+		font-weight: 500
+		font-size: 50px
+		color: $shark
+		line-height: 1em
+		margin-bottom: 25px
+		max-width: 470px
+		+r(1199)
+			font-size: 42px
+		+r(575)
+			font-size: 31px
+			max-width: 300px
+	h2
+		font-weight: 300
+		font-size: 24px
+		color: $shuttle-gray
+		line-height: 1.42em
+		margin-bottom: 30px
+		+r(1199)
+			font-size: 20px
+		+r(767)
+			margin-bottom: 20px
+		+r(575)
+			font-size: 16px
+	p
+		font-weight: 500
+		font-size: 24px
+		color: $shuttle-gray
+		line-height: 1em
+		margin-bottom: 50px
+		+r(767)
+			margin-bottom: 30px
+		+r(575)
+			font-size: 20px
+		span
+			font-size: 48px
+			color: $selective-yellow
+			line-height: 1em
+			+r(575)
+				font-size:  42px
+
+

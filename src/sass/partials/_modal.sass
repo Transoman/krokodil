@@ -1,0 +1,194 @@
+.modal
+	background: $white
+	position: relative
+	left: 0
+	top: 0
+	right: 0
+	bottom: 0
+	margin-top: 5%
+	margin-bottom: 5%
+	max-width: 400px
+	transform: scale(.7)
+	&__nav
+		display: flex
+		justify-content: center
+		padding: 40px 40px 10px
+		.button-nav
+			font-weight: 400
+			font-size: 12px
+			color: $manatee
+			background: $white
+			min-width: 120px
+			text-align: center
+			border: 1px solid $manatee
+			padding: 7px 20px
+			line-height: 1em
+			&-reg
+				border-right: 0
+			&-auth
+				border-left: 0
+			&.active
+				color: $shark
+				background: $selective-yellow
+				border-color: $selective-yellow
+	&__form
+
+		&_wrapper
+			padding: 40px 40px 45px
+			+r(575)
+				padding: 20px 20px 25px
+			h3
+				text-align: center
+				font-weight: 500
+				font-size: 36px
+				color: $shark
+				line-height: 1em
+				margin-bottom: 20px
+			p
+				text-align: center
+				color: $shuttle-gray
+				font-weight: 300
+				font-size: 16px
+				line-height: 1.3em
+				margin-bottom: 30px
+				&:last-of-type
+					margin-bottom: 0
+				span
+					font-weight: 400
+					font-size: 12px
+					color: $manatee
+					text-align: center
+					a
+						font-weight: 400
+						color: $selective-yellow
+						text-decoration: underline
+						&:hover
+							text-decoration: none
+		&_group
+			margin-bottom: 10px
+			position: relative
+			&::before
+				content: ''
+				position: absolute
+				left: 19px
+				top: 25px
+				transform: translateY(-50%)
+				background-repeat: no-repeat
+				background-position: center
+			&:last-of-type
+				margin-bottom: 20px
+			input
+				border: 1px solid $manatee
+				color: $manatee
+				border-radius: 0
+				background: transparent
+				line-height: 1em
+				box-shadow: none
+				font-size: 16px
+				font-family: $default-font
+				font-weight: 500
+				padding: 15px 90px 15px 40px
+				width: 100%
+				outline: none
+				-webkit-appearance: none
+				-moz-appearance: none
+				position: relative
+				&:required:valid
+					opacity: 1
+					outline: none
+					box-shadow: none
+					-webkit-appearance: none
+				&::placeholder
+					color: $manatee
+					font-family: $default-font
+					font-weight: 500
+					line-height: 1em
+					font-size: 16px
+		&_tel
+			&::before
+				width: 11px
+				height: 11px
+				background-image: url('../img/tel-form.svg')
+			span
+				cursor: pointer
+				position: absolute
+				right: 15px
+				top: 50%
+				line-height: 1em
+				font-size: 12px
+				text-decoration: underline
+				color: $selective-yellow
+				transform: translateY(-50%)
+				&:hover
+					text-decoration: none
+		&_code
+			&::before
+				width: 12px
+				height: 9px
+				background-image: url('../img/email.svg')
+		&_name
+			&::before
+				width: 10px
+				height: 11px
+				background-image: url('../img/user-solid.svg')
+
+		.button
+			display: block
+			width: 100%
+			margin-bottom: 15px
+
+.popup_visible
+	.modal
+		transform: scale(1)
+.popup_close
+	position: absolute
+	top: 15px
+	right: 15px
+	background: transparent
+	width: 20px
+	height: 20px
+	transition: all .3s ease
+	&::before, &::after
+		content: ''
+		width: 16px
+		height: 1px
+		background: $silver-chalice
+		position: absolute
+		left: calc( 50% - 8px )
+		top: calc(50% - .5px )
+		transition: all .3s ease
+	&::before
+		transform: rotate(45deg)
+	&::after
+		transform: rotate(-45deg)
+	&:hover
+		border-color: red
+		&::before, &::after
+			background: red
+		&::before
+			transform: rotate(-45deg)
+		&::after
+			transform: rotate(45deg)
+	span
+		display: none
+#thanks-reg
+	.modal__form
+		display: block!important
+		p
+			margin-bottom:  30px
+
+
+label.error
+	position: absolute
+	z-index: 1
+	left: 0
+	right: 0
+	top: -11px
+	width: 100%
+	background: $selective-yellow
+	color: $white
+	text-align: center
+	font-size: 12px
+	padding: 5px
+	text-decoration: none
+	line-height: 1em

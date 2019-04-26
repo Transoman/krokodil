@@ -1,0 +1,170 @@
+.header
+	display: flex
+	padding: 20px 0
+	position: relative
+	z-index: 1100
+	transition: all .3s ease
+	+r(1199)
+		&.active
+			.header__adaptive
+				transform: translateX(0)
+				transition: all .4s linear
+
+	&__wrapper
+		border-bottom: 1px solid $mercury
+		position: fixed
+		background: $white
+		left: 0
+		top: 0
+		right: 0
+		z-index: 1100
+		&.scroll
+			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1)
+			.header
+				padding: 10px 0
+	&__adaptive
+		display: flex
+		align-items: center
+		background: $white
+		z-index: 1000
+		+r(1199)
+			flex-direction: column
+			position: fixed
+			background: rgba(255,255,255,.9)
+			box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.1)
+			height: 100vh
+			width: 260px
+			right: auto
+			top: 0
+			left: 0
+			bottom: 0
+			transform: translateX(-100vw)
+	&__cabinet
+
+.logo
+	display: flex
+	margin-right: auto
+	align-items: center
+	+r(400)
+		flex-direction: column
+		align-items: flex-start
+	img
+		width: 149px
+		height: 40px
+		margin-right: 20px
+		+r(400)
+			margin-right: 0
+			margin-bottom: 5px
+	h2
+		font-weight: 300
+		font-size: 14px
+		line-height: 1.45em
+		max-width: 170px
+		color: $manatee
+		+r(575)
+			font-size: 12px
+			max-width: 150px
+		+r(400)
+			max-width: none
+			line-height: 1em
+.nav
+	margin-right: 15px
+	+r(1199)
+		margin-right: 0
+		padding-top: 90px
+	ul
+		display: flex
+		+r(1199)
+			flex-direction: column
+			text-align: center
+		li
+			a
+				display: block
+				line-height: 1em
+				padding: 12px 10px
+				font-weight: 300
+				font-size: 16px
+				color: $shuttle-gray
+				transition: all .3s linear
+				&:hover
+					background: $manatee
+					color: $white
+				&:active
+					background: $shuttle-gray
+
+.callback
+	margin-right: 30px
+	+r(1199)
+		margin-right: 0
+	a
+		display: inline-block
+		font-weight: 600
+		font-size: 15px
+		color: $shark
+		padding: 9.5px 10px
+
+.burger
+	+r(1199)
+		position: relative
+		z-index: 1200
+		right: 0
+		top: 0
+		width: 40px
+		height: 40px
+		transform: rotate(30deg)
+		transition: all .6s ease
+		&-bar
+			position: absolute
+			width: 18px
+			height: 2px
+			background: $selective-yellow
+			left: calc(50% - 9px)
+			transition: all .9s ease
+			&::before, &::after
+				content: ''
+				width: 18px
+				height: 2px
+				background: $selective-yellow
+				position: absolute
+				transition: all .3s ease
+			&-one
+				top: 4px
+				&::before
+					left: -13px
+					top: 8px
+					transform: rotate(120deg)
+				&::after
+					right: -13px
+					top: 8px
+					transform: rotate(-120deg)
+			&-two
+				bottom: 4px
+				&::before
+					left: -13px
+					bottom: 8px
+					transform: rotate(-120deg)
+				&::after
+					right: -13px
+					bottom: 8px
+					transform: rotate(120deg)
+			&-center
+				top: calc( 50% - 1px )
+				transform: rotate(-30deg)
+				&::before, &::after
+					content: ''
+					width: 18px
+					height: 2px
+				&::before
+					transform: translateY(4px)
+				&::after
+					transform: translateY(-4px)
+		&.active
+			transform: rotate(0)
+			.burger-bar
+				&-center
+					transform: translateY(0) rotate(0deg)
+					background: transparent
+					&::before
+						transform: translateY(0) rotate(45deg)
+					&::after
+						transform: translateY(0) rotate(-45deg)

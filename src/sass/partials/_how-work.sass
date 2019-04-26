@@ -1,0 +1,147 @@
+.how-work
+	&__wrapper
+		padding:  100px 0 40px
+		+r(991)
+			padding: 80px 0 40px
+		+r(767)
+			padding: 60px 0 40px
+		+r(575)
+			padding: 40px 0
+	&__container
+		display: flex
+		flex-wrap: wrap
+		&_card
+			width: 25%
+			text-align: center
+			cursor: pointer
+			position: relative
+			min-height: 395px
+			border: 1px solid transparent
+			+r(1199)
+				width: 50%
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					top: 50%
+					width: 1px
+					height: 80%
+					background: $concrete
+					transform: translateY(-50%)
+			+r(575)
+				width: 100%
+
+			&:hover
+				//box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1)
+				//&::before
+				//	opacity: 1
+				.how-work__container_flipper
+					transform: rotateY(180deg)
+			& + .how-work__container_card
+				position: relative
+				&::after
+					content: ''
+					position: absolute
+					left: 0
+					top: 50%
+					width: 1px
+					height: 80%
+					background: $concrete
+					transform: translateY(-50%)
+		&_img
+			position: relative
+			width: 172px
+			height: 166px
+			display: flex
+			align-items: center
+			justify-content: center
+			margin: 0 auto 30px
+			+r(575)
+				margin-bottom: 15px
+			&::before
+				content: ''
+				background: url('../img/we-work-icon.png')
+				position: absolute
+				width: 172px
+				height: 166px
+			img
+				position: relative
+				max-width: 80px
+		&_text
+			position: relative
+			h3
+				font-weight: 600
+				font-size: 24px
+				line-height: 1em
+				color: $shark
+				margin-bottom: 20px
+				+r(575)
+					font-size: 18px
+					margin-bottom: 10px
+			p
+				font-weight: 300
+				font-size: 18px
+				color: $shuttle-gray
+				+r(575)
+					font-size: 16px
+		&_flipper
+			transition: 0.6s
+			transform-style: preserve-3d
+			position: relative
+			.how-work__container_front, .how-work__container_back
+				width: 100%
+				min-height: 395px
+		&_front , &_back
+			backface-visibility: hidden
+			transition: all 1.5s ease
+			transform-style: preserve-3d
+			position: absolute
+			top: 0
+			left: 0
+			padding: 30px 40px 60px
+		&_front
+			z-index: 2
+			transform: rotateY(0deg)
+		&_back
+			transform: rotateY(180deg)
+			border: 1px solid $concrete
+			&:before
+				content: ''
+				background: url('../img/we-card-honeycomb.svg') no-repeat
+				position: absolute
+				right: 0
+				bottom: 0
+				width: 150px
+				height: 207px
+				opacity: 1
+				transition: all .5s ease
+.why-we
+	&__wrapper
+		padding: 100px 0 0
+		position: relative
+		+r(991)
+			padding: 80px 0 0
+		+r(767)
+			padding: 60px 0 0
+		+r(575)
+			padding: 40px 0 0
+		&::before
+			content: ''
+			position: absolute
+			width: 100%
+			height: calc(100% - 20px)
+			background: $alabaster
+			top: 0
+			left: 0
+			+r(575)
+				height: 100%
+		.how-work__container_card
+			padding: 30px 27px 20px
+			p
+				font-size: 16px
+				opacity: 0
+				transition: all .3s ease
+			&:hover
+				background: $white
+				p
+					opacity: 1

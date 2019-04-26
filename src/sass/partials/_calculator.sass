@@ -1,0 +1,178 @@
+#msform
+	width: 100%
+	max-width: 700px
+	margin: 50px auto
+	position: relative
+	min-height: 650px
+	+r(420)
+		max-width: 420px
+	.title
+		h2
+			margin-bottom: 15px
+	fieldset
+		border: 0 none
+		border-radius: 5px
+		padding: 20px 50px
+		width: 100%
+		box-sizing: border-box
+		position: relative
+		background: $gallery
+		text-align: center
+		+r(767)
+			padding: 20px
+		&:not(:first-of-type)
+			display: none
+			position: relative
+	input,textarea
+		padding: 15px
+		border: 1px solid #ccc
+		border-radius: 3px
+		margin-bottom: 10px
+		font-family: $default-font
+		font-size: 13px
+		width: 100%
+		color: $shuttle-gray
+		margin-top: 5px
+		&::placeholder
+			font-family: $default-font
+			font-weight: 500
+			line-height: 1em
+			color: $shuttle-gray
+	input[name="address"]
+		width: 79%
+		+r(575)
+			width: 100%
+	input[name="apartment"]
+		width: 20%
+		+r(575)
+			width: 100%
+	p
+		font-weight: 500
+		font-size: 16px
+		line-height: 1em
+		margin-bottom: 5px
+		text-align: left
+		color: $mako
+		&:last-of-type
+			margin-bottom: 30px
+		strong
+			position: relative
+			font-size: 12px
+			display: inline-block
+			font-weight: 400
+			color: $manatee
+			&::before
+				content: '('
+			&:after
+				content: ')'
+		&.fieldset-text-center
+			text-align: center
+			margin-bottom: 15px
+	ul
+		li
+			display: inline-block
+			a
+				display: block
+
+	.time__wrapper
+		display: flex
+		position: relative
+		margin-top: 5px
+		flex-wrap: wrap
+		input
+			position: absolute
+			opacity: 0
+			display: block
+			&:checked
+				& + label
+					border: 1px solid $pale-sky
+					color: $shuttle-gray
+		label
+			display: block
+			font-size: 12px
+			color: $shark
+			font-weight: 500
+			background: $white
+			border-radius: 5px
+			line-height: 1em
+			padding: 14px 25px
+			border: 1px solid $heather
+			cursor: pointer
+			margin-right: 30px
+			margin-bottom: 5px
+			&:last-of-type
+				margin-right: 0
+	.button + .button
+		margin-top: 20px
+#progressbar
+	margin-bottom: 30px
+	overflow: hidden
+	counter-reset: step
+	text-align: center
+	display: flex
+	justify-content: space-between
+	li
+		list-style-type: none
+		color: #fff
+		text-transform: uppercase
+		font-size: 9px
+		width: 100%
+		float: left
+		position: relative
+		&:before
+			content: counter(step)
+			counter-increment: step
+			width: 20px
+			line-height: 20px
+			display: block
+			font-size: 10px
+			color: #333
+			background: #fff
+			border-radius: 3px
+			margin: 0 auto 5px
+		&:after
+			content: ''
+			width: 100%
+			height: 2px
+			background: #fff
+			position: absolute
+			left: -50%
+			top: 9px
+			z-index: -1
+		&:first-child
+			&:after
+				content: none
+#progressbar li.active:before,#progressbar li.active:after
+	background: $selective-yellow
+	color: #fff
+.first-radio, .question
+	opacity: 0
+	position: absolute
+	&:checked
+		& + label
+			border: 1px solid $pale-sky
+			color: $shuttle-gray
+	&__wrapper
+		display: flex
+		justify-content: center
+		position: relative
+		margin-bottom: 30px
+		label
+			font-size: 12px
+			color: $shark
+			font-weight: 500
+			background: $white
+			line-height: 1em
+			padding: 14px 25px
+			border: 1px solid $heather
+			cursor: pointer
+	&_left
+		& + label
+			border-radius: 25px 0 0 25px
+	&_right
+		& + label
+			border-radius: 0 25px 25px 0
+.question__wrapper
+	margin-top: 15px
+	label
+		padding:  12px 45px

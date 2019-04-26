@@ -1,0 +1,82 @@
+.faq
+	padding: 100px 0 150px
+	+r(991)
+		padding: 80px 0
+	+r(767)
+		padding: 60px 0
+	+r(575)
+		padding: 40px 0
+	&__accordion
+		display: flex
+		flex-wrap: wrap
+		padding-top: 20px
+		margin-bottom:  30px
+	&__wrapper
+		width: 50%
+		padding-right: 40px
+		+r(991)
+			width: 100%
+			padding-right: 0
+	&__head
+		font-weight: 600
+		font-size: 20px
+		line-height: 1.2em
+		color: $shark
+		margin-bottom: 20px
+		cursor: pointer
+		position: relative
+		transition: all .3s ease
+		padding-right: 30px
+		+r(575)
+			font-size: 16px
+		&::before
+			content: ''
+			position: absolute
+			width: 10px
+			height: 7px
+			right: 10px
+			top: 50%
+			transform: translateY(-50%)
+			transition: all .3s ease
+		&::before
+			background: url('../img/arrow-up.svg') no-repeat center
+		&.active
+			color: $selective-yellow
+			transition: all .3s ease
+			&::before
+				background: url('../img/arrow-down.svg') no-repeat center
+	&__toggle
+		display: none
+		cursor: pointer
+		margin-bottom: 20px
+		font-weight: 300
+		font-size: 16px
+		line-height: 1.5em
+		color: $shuttle-gray
+		+r(575)
+			font-size: 14px
+		p
+			margin-bottom: 5px
+			&:last-of-type
+				margin-bottom: 0
+		&.active
+			display: block
+	&-page
+		padding-top: 200px
+		padding-bottom: 100px
+		+r(1199)
+			padding-top: 160px
+		+r(991)
+			padding-top: 140px
+		+r(767)
+			padding-top: 120px
+		+r(575)
+			padding-top: 120px
+		img
+			width: 570px
+		.faq__accordion
+			flex-direction: column
+			+r(991)
+				max-width: 350px
+			+r(767)
+				max-width: none

@@ -1,0 +1,164 @@
+.place
+	&__wrapper
+		padding: 50px 0 100px
+		+r(991)
+			padding: 50px 0 60px
+		+r(575)
+			padding: 40px 0
+	&__card
+		width: 100%
+		max-width: 370px
+		border: 1px solid $mercury
+		padding: 30px
+		margin-bottom: 30px
+		transition: all .5s ease
+		cursor: pointer
+		position: relative
+		display: flex
+		flex-direction: column
+		+r(1199)
+			max-width: 320px
+			padding: 20px 20px 30px
+		&:before
+			content: ''
+			background: url('../img/we-card-honeycomb.svg') no-repeat
+			position: absolute
+			right: 0
+			bottom: 0
+			width: 150px
+			height: 207px
+		+r(1199)
+			margin: 0 10px 30px
+		+r(575)
+			margin: 0 0 20px
+		&:nth-of-type(3n+2)
+			margin: 0 10px 30px
+			+r(575)
+				margin: 0 0 20px
+
+		&:last-of-type
+			h3
+				margin-bottom: 35px
+			strong
+				font-size: 20px
+			p
+				color: $shark
+				a
+					font-weight: 600
+		&:hover
+			border-color: transparent
+			box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.1)
+		&_img
+			margin-bottom: 30px
+			position: relative
+			display: flex
+			justify-content: center
+			align-items: center
+			min-height: 212px
+			img
+				display: block
+		h3
+			font-weight: 500
+			font-size: 30px
+			color: $shark
+			line-height: 1em
+			position: relative
+			margin-bottom: 15px
+			&::after
+				content: '-'
+				color: $selective-yellow
+		strong
+			display: block
+			font-weight: 300
+			font-size: 18px
+			color: $manatee
+			line-height: 1em
+			margin-bottom: 25px
+			position: relative
+		p
+			font-weight: 300
+			font-size: 16px
+			line-height: 1.5em
+			color: $mako
+			margin-bottom: 50px
+			position: relative
+			+r(767)
+				margin-bottom: 20px
+			a
+				color: $selective-yellow
+				text-decoration: underline
+		&_price
+			display: flex
+			align-items: center
+			margin-top: auto
+			position: relative
+			+r(767)
+				flex-direction: column
+				justify-content: center
+			.price
+				margin-bottom: 0
+				font-weight: 500
+				font-size: 30px
+				color: $shark
+				display: flex
+				align-items: center
+			.per-month
+				display: block
+				font-weight: 800
+				margin-left: 8px
+				font-size: 11px
+				max-width: 30px
+				line-height: 1em
+				text-transform: uppercase
+			.button
+				margin-left: auto
+				+r(767)
+					margin-left: 0
+		&_social
+			display: flex
+			flex-wrap: wrap
+
+
+		&_wrapper
+			display: flex
+			flex-wrap: wrap
+			+r(1199)
+				justify-content: center
+.social
+	display: block
+	width: 50%
+	font-weight: 600
+	font-size: 16px
+	color: $shuttle-gray
+	position: relative
+	padding-left: 40px
+	margin-bottom: 30px
+	&::before
+		content: ''
+		position: absolute
+		left: 5px
+		top: 50%
+		transform: translateY(-50%)
+		background-repeat: no-repeat
+		background-position: center
+		background-size: cover
+	&-viber
+		&::before
+			background-image: url('../img/viber.svg')
+			width: 19px
+			height: 20px
+	&-telegram
+		&::before
+			background-image: url('../img/telegram.svg')
+			width: 24px
+			height: 20px
+	&-facebook
+		&::before
+			background-image: url('../img/facebook.svg')
+			width: 20px
+			height: 20px
+	&-whatsapp
+		&::before
+			background-image: url('../img/whatsapp.svg')
+			width: 20px
+			height: 20px

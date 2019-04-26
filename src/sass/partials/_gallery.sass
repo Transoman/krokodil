@@ -1,0 +1,77 @@
+.gallery
+	padding: 20px 0 50px
+	+r(575)
+		padding: 40px 0
+	&__wrapper
+		width: 100%
+		margin-bottom: 40px
+		position: relative
+	.hidden
+		visibility: hidden
+		width: 0!important
+		height: 0!important
+		margin: 0!important
+		padding: 0!important
+	&__img
+		width: 20%
+		padding: 5px
+		+r(1199)
+			width: 25%
+		+r(991)
+			width: 50%
+		+r(575)
+			width: 100%
+		&_small
+			height: 255px
+			+r(1199)
+				height: 200px
+			+r(991)
+				height: 150px
+			+r(575)
+				height: 200px
+		&_big
+			height: 510px
+			+r(1199)
+				height: 400px
+			+r(991)
+				height: 300px
+			+r(575)
+				height: 200px
+		&_block
+			width: 100%
+			height: 100%
+			background: $white
+			a
+				position: relative
+				width: 100%
+				height: 100%
+				display: block
+				&::before
+					content: ''
+					position: absolute
+					width: 100%
+					height: 100%
+					background: $selective-yellow url('../img/gallery-zoom.svg') no-repeat center
+					opacity: 0
+					transition: all .3s ease
+				&::after
+					content: ''
+					position: absolute
+					top: 20px
+					left: 20px
+					right: 20px
+					bottom: 20px
+					border: 1px solid $white
+					opacity: 0
+					transition: all .3s ease
+			img
+				display: block
+				width: 100%
+				height: 100%
+				object-fit: cover
+			&:hover
+				a
+					&::before
+						opacity: 0.8
+					&::after
+						opacity: 0.8

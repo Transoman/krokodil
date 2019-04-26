@@ -1,0 +1,166 @@
+.reviews
+	padding: 120px 0 80px
+	+r(991)
+		padding: 80px 0
+	+r(767)
+		padding: 60px 0
+	+r(575)
+		padding: 40px 0
+	&__wrapper
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-around
+		+r(991)
+			justify-content: space-between
+		+r(767)
+			justify-content: center
+	&__card
+		max-width: 470px
+		width: 100%
+		border: 1px solid $mercury
+		padding:  70px 30px 80px 50px
+		position: relative
+		height: auto
+		margin-bottom: 30px
+		&.hidden
+			display: none
+		+r(1199)
+			max-width: 400px
+			padding: 70px 30px 80px 20px
+		+r(991)
+			max-width: 330px
+			padding: 0
+		&:nth-of-type(even)
+			top: -100px
+			+r(1199)
+				top: 0
+		&:before
+			content: ''
+			background: url('../img/rew-bg-honeycomb.svg') no-repeat
+			position: absolute
+			right: 0
+			bottom: 0
+			width: 330px
+			height: 157px
+		&_img
+			z-index: 2
+			position: relative
+			width: 100px
+			height: 57.74px
+			margin: 28.87px 0 70px
+			background-size: auto 115.4701px
+			background-position: center
+			box-shadow: 0 0 10px rgba(0,0,0,0.4)
+			+r(991)
+				position: absolute
+				top: 20px
+				left: 10px
+			&::after
+				content: ""
+				position: absolute
+				top: 0
+				left: 0
+				width: 100px
+				height: 57.7350px
+				z-index: 2
+				background: inherit
+			&-top, &-bottom
+				position: absolute
+				z-index: 1
+				width: 70.71px
+				height: 70.71px
+				overflow: hidden
+				-webkit-transform: scaleY(0.5774) rotate(-45deg)
+				-ms-transform: scaleY(0.5774) rotate(-45deg)
+				transform: scaleY(0.5774) rotate(-45deg)
+				background: inherit
+				left: 14.64px
+				box-shadow: 0 0 10px rgba(0,0,0,0.4)
+				&::after
+					content: ''
+					position: absolute
+					width: 100.0000px
+					height: 57.73502691896258px
+					-webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px)
+					-ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px)
+					transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px)
+					-webkit-transform-origin: 0 0
+					-ms-transform-origin: 0 0
+					transform-origin: 0 0
+					background: inherit
+			&-top
+				top: -35.3553px
+				&::after
+					background-position: center top
+			&-bottom
+				bottom: -35.3553px
+				&::after
+					background-position: center bottom
+			img
+				width: 100px
+				height: 115px
+				object-fit: cover
+		&_name
+			position: absolute
+			background: $selective-yellow
+			width: 400px
+			height: 155px
+			display: flex
+			justify-content: center
+			flex-direction: column
+			padding: 5px 30px 5px 80px
+			top: 39px
+			left: 99px
+			z-index: 1
+			+r(1199)
+				left: 69px
+				width: 350px
+			+r(991)
+				left: 0
+				width: 100%
+				height: auto
+				min-height: 155px
+				position: relative
+				top: 0
+				margin-bottom: 30px
+				padding: 5px 20px 5px 120px
+			&:before
+				content: ''
+				background: url('../img/reviews-honeycomb.svg') no-repeat
+				position: absolute
+				right: 0
+				bottom: 0
+				width: 168px
+				height: 123px
+			h3
+				font-weight: 500
+				font-size: 20px
+				color: $shark
+				position: relative
+				+r(991)
+					font-size: 18px
+			time
+				position: relative
+				color: $chelsea-gem
+		&_title
+			font-weight: 600
+			font-size: 20px
+			line-height: 1.2em
+			color: $shark
+			margin-bottom: 15px
+			position: relative
+			padding-left: 50px
+			+r(991)
+				padding: 0 30px
+		&_text
+			font-weight: 300
+			font-size: 16px
+			line-height: 1.5em
+			color: $shuttle-gray
+			position: relative
+			padding-left: 50px
+			+r(991)
+				padding: 0 30px 50px
+
+
+

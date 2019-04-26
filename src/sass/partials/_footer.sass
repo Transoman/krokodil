@@ -1,0 +1,79 @@
+.footer
+	padding: 40px 0
+	border-top: 1px solid $mercury
+	.logo
+		margin-bottom: 15px
+		+r(575)
+			img
+				margin: 0 auto
+		&__description
+			font-weight: 300
+			font-size: 14px
+			line-height: 1.5em
+			color: $shuttle-gray
+			max-width: 170px
+			+r(575)
+				max-width: none
+	.copyright
+		display: inline-block
+		position: relative
+		color: $shuttle-gray
+		font-weight: 400
+		top: -20px
+		+r(991)
+			top: 0
+		+r(575)
+			text-align: center
+			display: block
+	h2
+		padding-top: 5px
+		font-weight: 300
+		font-size: 24px
+		color: $silver-chalice
+		margin-bottom: 25px
+	p
+		font-weight: 400
+		font-size: 16px
+		color: $shuttle-gray
+		margin-bottom: 20px
+		&:last-of-type
+			margin-bottom: 0
+		a
+			color: $shuttle-gray
+			display: block
+			&.footer__tel
+				font-weight: 600
+	&__content
+		+r(991)
+			margin-bottom: 20px
+		+r(575)
+			text-align: center
+	&__social
+		padding-left: 70px
+		+r(991)
+			padding-left: 0
+		+r(575)
+			display: flex
+			flex-direction: column
+			align-items: center
+		.social
+			font-size: 16px
+			font-weight: 400
+			padding-left: 25px
+			margin: 0
+			+r(575)
+				width: 100%
+			&::before
+				left: 0
+			&-telegram
+				&::before
+					width: 15px
+					height: 12px
+			&-facebook
+				&::before
+					width: 12px
+					height: 12px
+			&-whatsapp
+				&::before
+					width: 12px
+					height: 12px

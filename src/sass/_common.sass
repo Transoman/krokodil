@@ -1,0 +1,229 @@
+.button
+	display: inline-block
+	font-weight: 600
+	font-size: 14px
+	text-transform: uppercase
+	letter-spacing: .05em
+	line-height: 1em
+	color: $shark
+	position: relative
+	border: 1px solid $selective-yellow
+	cursor: pointer
+	text-align: center
+	&_login
+		padding: 12px 18px 12px 38px
+		background: $selective-yellow
+		&::before
+			content: url('../img/user.svg')
+			position: absolute
+			width: 11px
+			height:  12px
+			left: 19px
+			top: 50%
+			transform: translateY(-50%)
+		&-exit
+			position: relative
+			&::after
+				content: ''
+				width: 5px
+				height: 5px
+				position: absolute
+				border: 4px solid transparent
+				border-top: 3px solid $shark
+				right: 10px
+				top: 50%
+	&-honeycomb
+		padding: 19px 37px
+		background: $white right bottom
+		position: relative
+		transition: all .3s ease
+		&::after
+			content: url('../img/btn-honeycomb.svg')
+			position: absolute
+			width: 55px
+			height: 44px
+			right: 0
+			bottom: 0
+			opacity: 0
+			transition: all .3s ease
+		span
+			position: relative
+			z-index: 1
+			transition: all .3s ease
+			color: $selective-yellow
+		&:hover
+			background-color: $selective-yellow
+			position: relative
+			box-shadow: 0 5px 15px 0 rgba(255, 180, 5, 0.5)
+			span
+				color: $shark
+			&::after
+				opacity: 1
+		&-small
+			padding: 18px 20px
+	&__wrapper
+		+r(767)
+			text-align: center
+		&_center
+			text-align: center
+		&_flex
+			display: flex
+			justify-content: space-between
+			a + a
+				margin-left: 10px
+		&_full-width
+			.button
+				width: 100%
+	&-reviews
+		top: -100px
+		left: 60%
+		+r(1199)
+			top: 0
+			left: 50%
+			transform: translateX(-50%)
+	&__drop-list
+		display: flex
+		flex-direction: column
+		position: relative
+		width: 220px
+	&-menu
+		width: 100%
+		text-align: center
+		padding: 12px 18px
+		background: $white
+		&_list
+			width: 220px
+			top: 100%
+			position: absolute
+			display: none
+			&.active
+				display: block
+
+
+.form
+	&-first-screen
+		display: flex
+		align-items: center
+		+r(1199)
+			flex-direction: column
+			align-items: flex-start
+		+r(991)
+			flex-direction: row
+		+r(575)
+			flex-direction: column
+			align-items: center
+		.form__field
+			+r(1199)
+				margin-bottom: 10px
+			input
+				border-right: none
+				+r(1199)
+					border-right: 1px solid $heather
+				+r(991)
+					border-right: none
+				+r(575)
+					border-right: 1px solid $heather
+
+	&__field
+		position: relative
+		input
+			border: 1px solid $heather
+			color: $manatee
+			border-radius: 0
+			line-height: 1em
+			box-shadow: none
+			font-size: 16px
+			font-family: $default-font
+			font-weight: 500
+			width: 100%
+			max-width: 237px
+			background: $white
+			outline: none
+			padding: 16px 33px 17px 39px
+			-webkit-appearance: none
+			-moz-appearance: none
+			position: relative
+		&_tel
+			&::before
+				content: ''
+				background: url('../img/phone-solid.svg')
+				position: absolute
+				width: 11px
+				height: 11px
+				z-index: 1
+				left: 19px
+				top: 50%
+				transform: translateY(-50%)
+.title
+	text-align: center
+	margin-bottom: 30px
+	position: relative
+	h2
+		font-weight: 500
+		font-size: 42px
+		line-height:  1em
+		color: $shark
+		+r(991)
+			font-size: 38px
+		+r(767)
+			font-size: 34px
+		+r(575)
+			font-size: 28px
+	&-left
+		text-align: left
+		+r(767)
+			text-align: center
+	&-reviews
+		padding-left: 50px
+		+r(991)
+			padding-left: 0
+	h3
+		font-weight: 600
+		font-size: 24px
+		line-height:  1em
+		color: $shark
+		margin-bottom: 10px
+	h4
+		font-weight: 400
+		font-size: 14px
+		line-height:  1em
+		color: $shuttle-gray
+	&__edit-link
+		font-size: 16px
+		line-height: 1
+		color: $pale-sky
+		&:hover, &:focus
+			color: $selective-yellow
+
+.text-center
+	text-align: center
+
+.fileinput
+	width: 0.1px
+	height: 0.1px
+	opacity: 0
+	overflow: hidden
+	position: absolute !important
+	z-index: -1
+	& ~ label
+		width: 140px
+		text-align: center
+		padding: 15px 20px
+		border: 1px solid $selective-yellow
+		font-family: $default-font
+		font-weight: 500
+		color: $manatee
+		border-radius: 0
+		box-shadow: none
+		display: inline-block
+		cursor: pointer
+		transition: all 0.25s ease
+		white-space: nowrap
+		text-overflow: ellipsis
+		overflow: hidden
+		*
+			pointer-events: none
+	&:focus ~ label,
+	& ~ label:hover
+		background-color: $selective-yellow
+		color: #fff

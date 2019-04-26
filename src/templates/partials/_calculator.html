@@ -1,0 +1,218 @@
+<!-- multistep form -->
+<form id="msform">
+  <!-- progressbar -->
+  <ul id="progressbar">
+    <li class="active"></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+  <!-- fieldsets -->
+  <fieldset class="fieldset">
+    <div class="title">
+      <h3>
+        На какой срок вы хотите сдать вещи?
+      </h3>
+      <h4>
+        Минимальный срок хранения - 3 месяца. На 15% дешевле при подписке на год
+      </h4>
+    </div>
+    <div class="first-radio__wrapper">
+
+      <input type="radio" id="shelf-life-3-months" name="shelf-life" value="от 3 месяцев" class="first-radio first-radio_left" checked >
+      <label for="shelf-life-3-months">
+        от 3 месяцев
+      </label>
+      <input type="radio" id="shelf-life-12-months" name="shelf-life" value="от 12 месяцев" class="first-radio first-radio_right">
+      <label for="shelf-life-12-months">
+        от 12 месяцев
+      </label>
+    </div>
+    <a href="index.html#price" class="button button-honeycomb">
+      <span>
+        На главную
+      </span>
+    </a>
+    <a href="#" name="next" class="next button button-honeycomb">
+      <span>
+        ДАЛЕЕ
+      </span>
+    </a>
+
+  </fieldset>
+  <fieldset class="fieldset">
+    <div class="title">
+      <h3>
+      Откуда и когда забрать вещи?
+      </h3>
+    </div>
+    <p>
+      <input type="text" name="address" placeholder="Адрес" required>
+      <input type="text" name="apartment" placeholder="Квартира" required>
+    </p>
+    <p>
+      <input type="text" name="comments-to-address" placeholder="Комментарий к адресу" required>
+    </p>
+    <p>
+      День
+      <input type="date" name="date" required>
+    </p>
+    <p>
+      Время
+      <span class="time__wrapper">
+
+        <input type="radio" id="time-one" name="time"  checked>
+        <label for="time-one">
+          9.00 - 13.00
+        </label>
+
+        <input type="radio" id="time-two" name="time">
+        <label for="time-two">
+          13.00 - 17.00
+        </label>
+
+        <input type="radio" id="time-three" name="time">
+        <label for="time-three">
+          17.00 - 21.00
+        </label>
+      </span>
+    </p>
+
+    <a href="#" type="button" name="previous" class="previous button button-honeycomb">
+      <span>
+        Назад
+      </span>
+    </a>
+    <a href="#" type="button" name="next" class="next button button-honeycomb">
+      <span>
+        ДАЛЕЕ
+      </span>
+    </a>
+
+  </fieldset>
+  <fieldset class="fieldset">
+    <div class="title">
+      <h3>
+      Ваши контактные данные:
+      </h3>
+    </div>
+    <p>
+      <input type="text" name="name" placeholder="Фамилия, имя, отчество" required>
+    </p>
+    <p>
+      <input type="tel" name="tel" placeholder="Телефон" required>
+    </p>
+    <p>
+      <input type="text" name="tel-cod" placeholder="Код из SMS" required>
+    </p>
+    <p>
+      <input type="email" name="email" placeholder="Почта (необязательно)">
+    </p>
+
+    <a href="#" type="button" name="previous" class="previous button button-honeycomb">
+      <span>
+        Назад
+      </span>
+    </a>
+    <a href="#" type="button" name="next" class="next button button-honeycomb">
+      <span>
+        ДАЛЕЕ
+      </span>
+    </a>
+
+  </fieldset>
+  <fieldset class="fieldset">
+    <div class="title">
+      <h3>
+      Ответьте на вопросы, что бы помочь нам подготовиться ко встрече:
+      </h3>
+    </div>
+    <p>
+      1.  Будут ли вещи, для транспотрировки которых нужны два человека?
+      <strong>например кровати, диваны, столы</strong>
+        <span class="question__wrapper">
+
+        <input type="radio" id="question-one-yes" name="question-one" class="question question_left" value="Да"  checked>
+        <label for="question-one-yes">
+             Да
+        </label>
+        <input type="radio" id="question-one-no" name="question-one" class="question question_right" value="Нет"  >
+        <label for="question-one-no">
+          Нет
+        </label>
+      </span>
+    </p>
+    <p>
+      2. Будут ли тяжелые вещи, требующие дополнительных усилий для погрузкы
+      <strong>например бытовая техника</strong>
+      <strong>например кровати, диваны, столы</strong>
+      <span class="question__wrapper">
+        <input type="radio" id="question-two-yes" name="question-two" class="question question_left" value="Да"  checked>
+        <label for="question-two-yes">
+             Да
+        </label>
+        <input type="radio" id="question-two-no" name="question-two" class="question question_right" value="Нет"  >
+        <label for="question-two-no">
+          Нет
+        </label>
+      </span>
+    </p>
+    <a href="#" type="button" name="previous" class="previous button button-honeycomb">
+      <span>
+        Назад
+      </span>
+    </a>
+    <a href="#" type="button" name="next" class="next button button-honeycomb">
+      <span>
+        Далее
+      </span>
+    </a>
+  </fieldset>
+  <fieldset class="fieldset">
+    <div class="title">
+      <h2>
+        Cпасибо за Вашу заявку.
+      </h2>
+      <h4>
+        Наш менеджер свяжется с Вами в ближайшее время!
+      </h4>
+    </div>
+    <p class="fieldset-text-center">
+      Мы также доступны в:
+      <ul>
+        <li>
+          <a href="#" class="social social-facebook">
+            Facebook
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social social-telegram">
+            Telegram
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social social-whatsapp">
+            WhatsApp
+          </a>
+        </li>
+        <li>
+          <a href="#" class="social social-viber">
+            Viber
+          </a>
+        </li>
+      </ul>
+    </p>
+    <a href="#" type="button" name="previous" class="previous button button-honeycomb">
+      <span>
+        Назад
+      </span>
+    </a>
+    <a href="#" type="submit" name="submit" class="submit button button-honeycomb">
+      <span>
+        Заказать
+      </span>
+    </a>
+  </fieldset>
+</form>
+
